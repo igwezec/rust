@@ -1,5 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src&#x2F;protos&#x2F;rewriter_config.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>rewriter_config.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
-    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../tensorflow/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src&#x2F;protos&#x2F;rewriter_config.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>rewriter_config.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a class="sidebar-logo" href="../../../tensorflow/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.png" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../tensorflow/index.html"><img class="rust-logo" src="../../../rust-logo.png" alt="logo"></a><nav class="sub"><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
 <span id="2">   2</span>
 <span id="3">   3</span>
 <span id="4">   4</span>
@@ -2229,6 +2230,72 @@
 <span id="2228">2228</span>
 <span id="2229">2229</span>
 <span id="2230">2230</span>
+<span id="2231">2231</span>
+<span id="2232">2232</span>
+<span id="2233">2233</span>
+<span id="2234">2234</span>
+<span id="2235">2235</span>
+<span id="2236">2236</span>
+<span id="2237">2237</span>
+<span id="2238">2238</span>
+<span id="2239">2239</span>
+<span id="2240">2240</span>
+<span id="2241">2241</span>
+<span id="2242">2242</span>
+<span id="2243">2243</span>
+<span id="2244">2244</span>
+<span id="2245">2245</span>
+<span id="2246">2246</span>
+<span id="2247">2247</span>
+<span id="2248">2248</span>
+<span id="2249">2249</span>
+<span id="2250">2250</span>
+<span id="2251">2251</span>
+<span id="2252">2252</span>
+<span id="2253">2253</span>
+<span id="2254">2254</span>
+<span id="2255">2255</span>
+<span id="2256">2256</span>
+<span id="2257">2257</span>
+<span id="2258">2258</span>
+<span id="2259">2259</span>
+<span id="2260">2260</span>
+<span id="2261">2261</span>
+<span id="2262">2262</span>
+<span id="2263">2263</span>
+<span id="2264">2264</span>
+<span id="2265">2265</span>
+<span id="2266">2266</span>
+<span id="2267">2267</span>
+<span id="2268">2268</span>
+<span id="2269">2269</span>
+<span id="2270">2270</span>
+<span id="2271">2271</span>
+<span id="2272">2272</span>
+<span id="2273">2273</span>
+<span id="2274">2274</span>
+<span id="2275">2275</span>
+<span id="2276">2276</span>
+<span id="2277">2277</span>
+<span id="2278">2278</span>
+<span id="2279">2279</span>
+<span id="2280">2280</span>
+<span id="2281">2281</span>
+<span id="2282">2282</span>
+<span id="2283">2283</span>
+<span id="2284">2284</span>
+<span id="2285">2285</span>
+<span id="2286">2286</span>
+<span id="2287">2287</span>
+<span id="2288">2288</span>
+<span id="2289">2289</span>
+<span id="2290">2290</span>
+<span id="2291">2291</span>
+<span id="2292">2292</span>
+<span id="2293">2293</span>
+<span id="2294">2294</span>
+<span id="2295">2295</span>
+<span id="2296">2296</span>
 </pre><pre class="rust"><code><span class="comment">// This file is generated by rust-protobuf 2.27.1. Do not edit</span>
 <span class="comment">// @generated</span>
 
@@ -2619,9 +2686,11 @@
     <span class="kw">pub</span> <span class="ident">implementation_selector</span>: <span class="ident">RewriterConfig_Toggle</span>,
     <span class="kw">pub</span> <span class="ident">auto_mixed_precision</span>: <span class="ident">RewriterConfig_Toggle</span>,
     <span class="kw">pub</span> <span class="ident">auto_mixed_precision_mkl</span>: <span class="ident">RewriterConfig_Toggle</span>,
+    <span class="kw">pub</span> <span class="ident">auto_mixed_precision_onednn_bfloat16</span>: <span class="ident">RewriterConfig_Toggle</span>,
     <span class="kw">pub</span> <span class="ident">auto_mixed_precision_cpu</span>: <span class="ident">RewriterConfig_Toggle</span>,
     <span class="kw">pub</span> <span class="ident">disable_meta_optimizer</span>: <span class="ident">bool</span>,
     <span class="kw">pub</span> <span class="ident">use_plugin_optimizers</span>: <span class="ident">RewriterConfig_Toggle</span>,
+    <span class="kw">pub</span> <span class="ident">experimental_conditional_code_motion</span>: <span class="ident">RewriterConfig_Toggle</span>,
     <span class="kw">pub</span> <span class="ident">meta_optimizer_iterations</span>: <span class="ident">RewriterConfig_NumIterationsType</span>,
     <span class="kw">pub</span> <span class="ident">min_graph_nodes</span>: <span class="ident">i32</span>,
     <span class="kw">pub</span> <span class="ident">experimental_disable_compressed_tensor_optimization</span>: <span class="ident">bool</span>,
@@ -2907,6 +2976,21 @@
         <span class="self">self</span>.<span class="ident">auto_mixed_precision_mkl</span> <span class="op">=</span> <span class="ident">v</span>;
     }
 
+    <span class="comment">// .tensorflow.RewriterConfig.Toggle auto_mixed_precision_onednn_bfloat16 = 31;</span>
+
+
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">get_auto_mixed_precision_onednn_bfloat16</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">RewriterConfig_Toggle</span> {
+        <span class="self">self</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span>
+    }
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">clear_auto_mixed_precision_onednn_bfloat16</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>) {
+        <span class="self">self</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span> <span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span>;
+    }
+
+    <span class="comment">// Param is passed by value, moved</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">set_auto_mixed_precision_onednn_bfloat16</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">v</span>: <span class="ident">RewriterConfig_Toggle</span>) {
+        <span class="self">self</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span> <span class="op">=</span> <span class="ident">v</span>;
+    }
+
     <span class="comment">// .tensorflow.RewriterConfig.Toggle auto_mixed_precision_cpu = 29;</span>
 
 
@@ -2950,6 +3034,21 @@
     <span class="comment">// Param is passed by value, moved</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">set_use_plugin_optimizers</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">v</span>: <span class="ident">RewriterConfig_Toggle</span>) {
         <span class="self">self</span>.<span class="ident">use_plugin_optimizers</span> <span class="op">=</span> <span class="ident">v</span>;
+    }
+
+    <span class="comment">// .tensorflow.RewriterConfig.Toggle experimental_conditional_code_motion = 30;</span>
+
+
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">get_experimental_conditional_code_motion</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">RewriterConfig_Toggle</span> {
+        <span class="self">self</span>.<span class="ident">experimental_conditional_code_motion</span>
+    }
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">clear_experimental_conditional_code_motion</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>) {
+        <span class="self">self</span>.<span class="ident">experimental_conditional_code_motion</span> <span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span>;
+    }
+
+    <span class="comment">// Param is passed by value, moved</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">set_experimental_conditional_code_motion</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">v</span>: <span class="ident">RewriterConfig_Toggle</span>) {
+        <span class="self">self</span>.<span class="ident">experimental_conditional_code_motion</span> <span class="op">=</span> <span class="ident">v</span>;
     }
 
     <span class="comment">// .tensorflow.RewriterConfig.NumIterationsType meta_optimizer_iterations = 12;</span>
@@ -3355,6 +3454,9 @@
                 <span class="number">25</span> =&gt; {
                     <span class="ident">::protobuf::rt::read_proto3_enum_with_unknown_fields_into</span>(<span class="ident">wire_type</span>, <span class="ident">is</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">auto_mixed_precision_mkl</span>, <span class="number">25</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">unknown_fields</span>)<span class="question-mark">?</span>
                 },
+                <span class="number">31</span> =&gt; {
+                    <span class="ident">::protobuf::rt::read_proto3_enum_with_unknown_fields_into</span>(<span class="ident">wire_type</span>, <span class="ident">is</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span>, <span class="number">31</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">unknown_fields</span>)<span class="question-mark">?</span>
+                },
                 <span class="number">29</span> =&gt; {
                     <span class="ident">::protobuf::rt::read_proto3_enum_with_unknown_fields_into</span>(<span class="ident">wire_type</span>, <span class="ident">is</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">auto_mixed_precision_cpu</span>, <span class="number">29</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">unknown_fields</span>)<span class="question-mark">?</span>
                 },
@@ -3367,6 +3469,9 @@
                 },
                 <span class="number">28</span> =&gt; {
                     <span class="ident">::protobuf::rt::read_proto3_enum_with_unknown_fields_into</span>(<span class="ident">wire_type</span>, <span class="ident">is</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">use_plugin_optimizers</span>, <span class="number">28</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">unknown_fields</span>)<span class="question-mark">?</span>
+                },
+                <span class="number">30</span> =&gt; {
+                    <span class="ident">::protobuf::rt::read_proto3_enum_with_unknown_fields_into</span>(<span class="ident">wire_type</span>, <span class="ident">is</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">experimental_conditional_code_motion</span>, <span class="number">30</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">unknown_fields</span>)<span class="question-mark">?</span>
                 },
                 <span class="number">12</span> =&gt; {
                     <span class="ident">::protobuf::rt::read_proto3_enum_with_unknown_fields_into</span>(<span class="ident">wire_type</span>, <span class="ident">is</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">meta_optimizer_iterations</span>, <span class="number">12</span>, <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">unknown_fields</span>)<span class="question-mark">?</span>
@@ -3493,6 +3598,9 @@
         <span class="kw">if</span> <span class="self">self</span>.<span class="ident">auto_mixed_precision_mkl</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
             <span class="ident">my_size</span> <span class="op">+</span><span class="op">=</span> <span class="ident">::protobuf::rt::enum_size</span>(<span class="number">25</span>, <span class="self">self</span>.<span class="ident">auto_mixed_precision_mkl</span>);
         }
+        <span class="kw">if</span> <span class="self">self</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
+            <span class="ident">my_size</span> <span class="op">+</span><span class="op">=</span> <span class="ident">::protobuf::rt::enum_size</span>(<span class="number">31</span>, <span class="self">self</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span>);
+        }
         <span class="kw">if</span> <span class="self">self</span>.<span class="ident">auto_mixed_precision_cpu</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
             <span class="ident">my_size</span> <span class="op">+</span><span class="op">=</span> <span class="ident">::protobuf::rt::enum_size</span>(<span class="number">29</span>, <span class="self">self</span>.<span class="ident">auto_mixed_precision_cpu</span>);
         }
@@ -3501,6 +3609,9 @@
         }
         <span class="kw">if</span> <span class="self">self</span>.<span class="ident">use_plugin_optimizers</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
             <span class="ident">my_size</span> <span class="op">+</span><span class="op">=</span> <span class="ident">::protobuf::rt::enum_size</span>(<span class="number">28</span>, <span class="self">self</span>.<span class="ident">use_plugin_optimizers</span>);
+        }
+        <span class="kw">if</span> <span class="self">self</span>.<span class="ident">experimental_conditional_code_motion</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
+            <span class="ident">my_size</span> <span class="op">+</span><span class="op">=</span> <span class="ident">::protobuf::rt::enum_size</span>(<span class="number">30</span>, <span class="self">self</span>.<span class="ident">experimental_conditional_code_motion</span>);
         }
         <span class="kw">if</span> <span class="self">self</span>.<span class="ident">meta_optimizer_iterations</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_NumIterationsType::DEFAULT_NUM_ITERS</span> {
             <span class="ident">my_size</span> <span class="op">+</span><span class="op">=</span> <span class="ident">::protobuf::rt::enum_size</span>(<span class="number">12</span>, <span class="self">self</span>.<span class="ident">meta_optimizer_iterations</span>);
@@ -3606,6 +3717,9 @@
         <span class="kw">if</span> <span class="self">self</span>.<span class="ident">auto_mixed_precision_mkl</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
             <span class="ident">os</span>.<span class="ident">write_enum</span>(<span class="number">25</span>, <span class="ident">::protobuf::ProtobufEnum::value</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">auto_mixed_precision_mkl</span>))<span class="question-mark">?</span>;
         }
+        <span class="kw">if</span> <span class="self">self</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
+            <span class="ident">os</span>.<span class="ident">write_enum</span>(<span class="number">31</span>, <span class="ident">::protobuf::ProtobufEnum::value</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span>))<span class="question-mark">?</span>;
+        }
         <span class="kw">if</span> <span class="self">self</span>.<span class="ident">auto_mixed_precision_cpu</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
             <span class="ident">os</span>.<span class="ident">write_enum</span>(<span class="number">29</span>, <span class="ident">::protobuf::ProtobufEnum::value</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">auto_mixed_precision_cpu</span>))<span class="question-mark">?</span>;
         }
@@ -3614,6 +3728,9 @@
         }
         <span class="kw">if</span> <span class="self">self</span>.<span class="ident">use_plugin_optimizers</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
             <span class="ident">os</span>.<span class="ident">write_enum</span>(<span class="number">28</span>, <span class="ident">::protobuf::ProtobufEnum::value</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">use_plugin_optimizers</span>))<span class="question-mark">?</span>;
+        }
+        <span class="kw">if</span> <span class="self">self</span>.<span class="ident">experimental_conditional_code_motion</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span> {
+            <span class="ident">os</span>.<span class="ident">write_enum</span>(<span class="number">30</span>, <span class="ident">::protobuf::ProtobufEnum::value</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">experimental_conditional_code_motion</span>))<span class="question-mark">?</span>;
         }
         <span class="kw">if</span> <span class="self">self</span>.<span class="ident">meta_optimizer_iterations</span> <span class="op">!</span><span class="op">=</span> <span class="ident">RewriterConfig_NumIterationsType::DEFAULT_NUM_ITERS</span> {
             <span class="ident">os</span>.<span class="ident">write_enum</span>(<span class="number">12</span>, <span class="ident">::protobuf::ProtobufEnum::value</span>(<span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">meta_optimizer_iterations</span>))<span class="question-mark">?</span>;
@@ -3791,6 +3908,11 @@
                 <span class="op">|</span><span class="ident">m</span>: <span class="kw-2">&amp;mut</span> <span class="ident">RewriterConfig</span><span class="op">|</span> { <span class="kw-2">&amp;mut</span> <span class="ident">m</span>.<span class="ident">auto_mixed_precision_mkl</span> },
             ));
             <span class="ident">fields</span>.<span class="ident">push</span>(<span class="ident">::protobuf::reflect::accessor::make_simple_field_accessor</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="ident">::protobuf::types::ProtobufTypeEnum</span><span class="op">&lt;</span><span class="ident">RewriterConfig_Toggle</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+                <span class="string">&quot;auto_mixed_precision_onednn_bfloat16&quot;</span>,
+                <span class="op">|</span><span class="ident">m</span>: <span class="kw-2">&amp;</span><span class="ident">RewriterConfig</span><span class="op">|</span> { <span class="kw-2">&amp;</span><span class="ident">m</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span> },
+                <span class="op">|</span><span class="ident">m</span>: <span class="kw-2">&amp;mut</span> <span class="ident">RewriterConfig</span><span class="op">|</span> { <span class="kw-2">&amp;mut</span> <span class="ident">m</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span> },
+            ));
+            <span class="ident">fields</span>.<span class="ident">push</span>(<span class="ident">::protobuf::reflect::accessor::make_simple_field_accessor</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="ident">::protobuf::types::ProtobufTypeEnum</span><span class="op">&lt;</span><span class="ident">RewriterConfig_Toggle</span><span class="op">&gt;</span><span class="op">&gt;</span>(
                 <span class="string">&quot;auto_mixed_precision_cpu&quot;</span>,
                 <span class="op">|</span><span class="ident">m</span>: <span class="kw-2">&amp;</span><span class="ident">RewriterConfig</span><span class="op">|</span> { <span class="kw-2">&amp;</span><span class="ident">m</span>.<span class="ident">auto_mixed_precision_cpu</span> },
                 <span class="op">|</span><span class="ident">m</span>: <span class="kw-2">&amp;mut</span> <span class="ident">RewriterConfig</span><span class="op">|</span> { <span class="kw-2">&amp;mut</span> <span class="ident">m</span>.<span class="ident">auto_mixed_precision_cpu</span> },
@@ -3804,6 +3926,11 @@
                 <span class="string">&quot;use_plugin_optimizers&quot;</span>,
                 <span class="op">|</span><span class="ident">m</span>: <span class="kw-2">&amp;</span><span class="ident">RewriterConfig</span><span class="op">|</span> { <span class="kw-2">&amp;</span><span class="ident">m</span>.<span class="ident">use_plugin_optimizers</span> },
                 <span class="op">|</span><span class="ident">m</span>: <span class="kw-2">&amp;mut</span> <span class="ident">RewriterConfig</span><span class="op">|</span> { <span class="kw-2">&amp;mut</span> <span class="ident">m</span>.<span class="ident">use_plugin_optimizers</span> },
+            ));
+            <span class="ident">fields</span>.<span class="ident">push</span>(<span class="ident">::protobuf::reflect::accessor::make_simple_field_accessor</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="ident">::protobuf::types::ProtobufTypeEnum</span><span class="op">&lt;</span><span class="ident">RewriterConfig_Toggle</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+                <span class="string">&quot;experimental_conditional_code_motion&quot;</span>,
+                <span class="op">|</span><span class="ident">m</span>: <span class="kw-2">&amp;</span><span class="ident">RewriterConfig</span><span class="op">|</span> { <span class="kw-2">&amp;</span><span class="ident">m</span>.<span class="ident">experimental_conditional_code_motion</span> },
+                <span class="op">|</span><span class="ident">m</span>: <span class="kw-2">&amp;mut</span> <span class="ident">RewriterConfig</span><span class="op">|</span> { <span class="kw-2">&amp;mut</span> <span class="ident">m</span>.<span class="ident">experimental_conditional_code_motion</span> },
             ));
             <span class="ident">fields</span>.<span class="ident">push</span>(<span class="ident">::protobuf::reflect::accessor::make_simple_field_accessor</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="ident">::protobuf::types::ProtobufTypeEnum</span><span class="op">&lt;</span><span class="ident">RewriterConfig_NumIterationsType</span><span class="op">&gt;</span><span class="op">&gt;</span>(
                 <span class="string">&quot;meta_optimizer_iterations&quot;</span>,
@@ -3908,9 +4035,11 @@
         <span class="self">self</span>.<span class="ident">implementation_selector</span> <span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span>;
         <span class="self">self</span>.<span class="ident">auto_mixed_precision</span> <span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span>;
         <span class="self">self</span>.<span class="ident">auto_mixed_precision_mkl</span> <span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span>;
+        <span class="self">self</span>.<span class="ident">auto_mixed_precision_onednn_bfloat16</span> <span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span>;
         <span class="self">self</span>.<span class="ident">auto_mixed_precision_cpu</span> <span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span>;
         <span class="self">self</span>.<span class="ident">disable_meta_optimizer</span> <span class="op">=</span> <span class="bool-val">false</span>;
         <span class="self">self</span>.<span class="ident">use_plugin_optimizers</span> <span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span>;
+        <span class="self">self</span>.<span class="ident">experimental_conditional_code_motion</span> <span class="op">=</span> <span class="ident">RewriterConfig_Toggle::DEFAULT</span>;
         <span class="self">self</span>.<span class="ident">meta_optimizer_iterations</span> <span class="op">=</span> <span class="ident">RewriterConfig_NumIterationsType::DEFAULT_NUM_ITERS</span>;
         <span class="self">self</span>.<span class="ident">min_graph_nodes</span> <span class="op">=</span> <span class="number">0</span>;
         <span class="self">self</span>.<span class="ident">experimental_disable_compressed_tensor_optimization</span> <span class="op">=</span> <span class="bool-val">false</span>;
@@ -4376,7 +4505,7 @@
     rifier_config.proto\&quot;P\n\x13AutoParallelOptions\x12\x16\n\x06enable\x18\
     \x01\x20\x01(\x08R\x06enable\x12!\n\x0cnum_replicas\x18\x02\x20\x01(\x05\
     R\x0bnumReplicas\&quot;5\n\x16ScopedAllocatorOptions\x12\x1b\n\tenable_op\x18\
-    \x01\x20\x03(\tR\x08enableOp\&quot;\x89\x1b\n\x0eRewriterConfig\x12X\n\x15cpu\
+    \x01\x20\x03(\tR\x08enableOp\&quot;\xf0\x1c\n\x0eRewriterConfig\x12X\n\x15cpu\
     _layout_conversion\x182\x20\x01(\x0e2$.tensorflow.RewriterConfig.CpuLayo\
     utR\x13cpuLayoutConversion\x12L\n\x10layout_optimizer\x18\x01\x20\x01(\
     \x0e2!.tensorflow.RewriterConfig.ToggleR\x0flayoutOptimizer\x12L\n\x10co\
@@ -4402,50 +4531,54 @@
     \x16implementationSelector\x12S\n\x14auto_mixed_precision\x18\x17\x20\
     \x01(\x0e2!.tensorflow.RewriterConfig.ToggleR\x12autoMixedPrecision\x12Z\
     \n\x18auto_mixed_precision_mkl\x18\x19\x20\x01(\x0e2!.tensorflow.Rewrite\
-    rConfig.ToggleR\x15autoMixedPrecisionMkl\x12Z\n\x18auto_mixed_precision_\
-    cpu\x18\x1d\x20\x01(\x0e2!.tensorflow.RewriterConfig.ToggleR\x15autoMixe\
-    dPrecisionCpu\x124\n\x16disable_meta_optimizer\x18\x13\x20\x01(\x08R\x14\
-    disableMetaOptimizer\x12U\n\x15use_plugin_optimizers\x18\x1c\x20\x01(\
-    \x0e2!.tensorflow.RewriterConfig.ToggleR\x13usePluginOptimizers\x12h\n\
-    \x19meta_optimizer_iterations\x18\x0c\x20\x01(\x0e2,.tensorflow.Rewriter\
-    Config.NumIterationsTypeR\x17metaOptimizerIterations\x12&amp;\n\x0fmin_graph\
-    _nodes\x18\x11\x20\x01(\x05R\rminGraphNodes\x12l\n3experimental_disable_\
-    compressed_tensor_optimization\x18\x1a\x20\x01(\x08R/experimentalDisable\
-    CompressedTensorOptimization\x12l\n3experimental_disable_folding_quantiz\
-    ation_emulation\x18\x1b\x20\x01(\x08R/experimentalDisableFoldingQuantiza\
-    tionEmulation\x12V\n\x13memory_optimization\x18\x04\x20\x01(\x0e2%.tenso\
-    rflow.RewriterConfig.MemOptTypeR\x12memoryOptimization\x12S\n&#39;memory_opt\
-    imizer_target_node_name_scope\x18\x06\x20\x01(\tR\&quot;memoryOptimizerTarget\
-    NodeNameScope\x129\n\x19meta_optimizer_timeout_ms\x18\x14\x20\x01(\x03R\
-    \x16metaOptimizerTimeoutMs\x12D\n\rauto_parallel\x18\x05\x20\x01(\x0b2\
-    \x1f.tensorflow.AutoParallelOptionsR\x0cautoParallel\x127\n\x18fail_on_o\
-    ptimizer_errors\x18\x15\x20\x01(\x08R\x15failOnOptimizerErrors\x12V\n\
-    \x15scoped_allocator_opts\x18\x10\x20\x01(\x0b2\&quot;.tensorflow.ScopedAlloc\
-    atorOptionsR\x13scopedAllocatorOpts\x12\x1e\n\noptimizers\x18d\x20\x03(\
-    \tR\noptimizers\x12]\n\x11custom_optimizers\x18\xc8\x01\x20\x03(\x0b2/.t\
-    ensorflow.RewriterConfig.CustomGraphOptimizerR\x10customOptimizers\x12b\
-    \n\x1finter_optimizer_verifier_config\x18\xac\x02\x20\x01(\x0b2\x1a.tens\
-    orflow.VerifierConfigR\x1cinterOptimizerVerifierConfig\x12f\n!post_optim\
-    ization_verifier_config\x18\xad\x02\x20\x01(\x0b2\x1a.tensorflow.Verifie\
-    rConfigR\x1epostOptimizationVerifierConfig\x1a\xea\x01\n\x14CustomGraphO\
-    ptimizer\x12\x12\n\x04name\x18\x01\x20\x01(\tR\x04name\x12f\n\rparameter\
-    _map\x18\x02\x20\x03(\x0b2A.tensorflow.RewriterConfig.CustomGraphOptimiz\
-    er.ParameterMapEntryR\x0cparameterMap\x1aV\n\x11ParameterMapEntry\x12\
-    \x10\n\x03key\x18\x01\x20\x01(\tR\x03key\x12+\n\x05value\x18\x02\x20\x01\
-    (\x0b2\x15.tensorflow.AttrValueR\x05value:\x028\x01\&quot;d\n\x06Toggle\x12\
-    \x0b\n\x07DEFAULT\x10\0\x12\x06\n\x02ON\x10\x01\x12\x07\n\x03OFF\x10\x02\
-    \x12\x0e\n\nAGGRESSIVE\x10\x03\x12\x15\n\x11EXPERIMENTAL_MLIR\x10\x04\
-    \x12\x15\n\x11EXPERIMENTAL_BOTH\x10\x05\&quot;I\n\tCpuLayout\x12\x18\n\x14NO_\
-    CONVERSION_ON_CPU\x10\0\x12\x10\n\x0cNCHW_TO_NHWC\x10\x01\x12\x10\n\x0cN\
-    HWC_TO_NCHW\x10\x02\&quot;&lt;\n\x11NumIterationsType\x12\x15\n\x11DEFAULT_NUM_I\
-    TERS\x10\0\x12\x07\n\x03ONE\x10\x01\x12\x07\n\x03TWO\x10\x02\&quot;\x9f\x01\n\
-    \nMemOptType\x12\x13\n\x0fDEFAULT_MEM_OPT\x10\0\x12\x0e\n\nNO_MEM_OPT\
-    \x10\x01\x12\n\n\x06MANUAL\x10\x02\x12\x17\n\x13SWAPPING_HEURISTICS\x10\
-    \x04\x12\x1c\n\x18RECOMPUTATION_HEURISTICS\x10\x05\x12\x19\n\x15SCHEDULI\
-    NG_HEURISTICS\x10\x06\x12\x0e\n\nHEURISTICS\x10\x03B\x8c\x01\n\x18org.te\
-    nsorflow.frameworkB\x14RewriterConfigProtosP\x01ZUgithub.com/tensorflow/\
-    tensorflow/tensorflow/go/core/protobuf/for_core_protos_go_proto\xf8\x01\
-    \x01b\x06proto3\
+    rConfig.ToggleR\x15autoMixedPrecisionMkl\x12q\n$auto_mixed_precision_one\
+    dnn_bfloat16\x18\x1f\x20\x01(\x0e2!.tensorflow.RewriterConfig.ToggleR\
+    \x20autoMixedPrecisionOnednnBfloat16\x12Z\n\x18auto_mixed_precision_cpu\
+    \x18\x1d\x20\x01(\x0e2!.tensorflow.RewriterConfig.ToggleR\x15autoMixedPr\
+    ecisionCpu\x124\n\x16disable_meta_optimizer\x18\x13\x20\x01(\x08R\x14dis\
+    ableMetaOptimizer\x12U\n\x15use_plugin_optimizers\x18\x1c\x20\x01(\x0e2!\
+    .tensorflow.RewriterConfig.ToggleR\x13usePluginOptimizers\x12r\n$experim\
+    ental_conditional_code_motion\x18\x1e\x20\x01(\x0e2!.tensorflow.Rewriter\
+    Config.ToggleR!experimentalConditionalCodeMotion\x12h\n\x19meta_optimize\
+    r_iterations\x18\x0c\x20\x01(\x0e2,.tensorflow.RewriterConfig.NumIterati\
+    onsTypeR\x17metaOptimizerIterations\x12&amp;\n\x0fmin_graph_nodes\x18\x11\
+    \x20\x01(\x05R\rminGraphNodes\x12l\n3experimental_disable_compressed_ten\
+    sor_optimization\x18\x1a\x20\x01(\x08R/experimentalDisableCompressedTens\
+    orOptimization\x12l\n3experimental_disable_folding_quantization_emulatio\
+    n\x18\x1b\x20\x01(\x08R/experimentalDisableFoldingQuantizationEmulation\
+    \x12V\n\x13memory_optimization\x18\x04\x20\x01(\x0e2%.tensorflow.Rewrite\
+    rConfig.MemOptTypeR\x12memoryOptimization\x12S\n&#39;memory_optimizer_target\
+    _node_name_scope\x18\x06\x20\x01(\tR\&quot;memoryOptimizerTargetNodeNameScope\
+    \x129\n\x19meta_optimizer_timeout_ms\x18\x14\x20\x01(\x03R\x16metaOptimi\
+    zerTimeoutMs\x12D\n\rauto_parallel\x18\x05\x20\x01(\x0b2\x1f.tensorflow.\
+    AutoParallelOptionsR\x0cautoParallel\x127\n\x18fail_on_optimizer_errors\
+    \x18\x15\x20\x01(\x08R\x15failOnOptimizerErrors\x12V\n\x15scoped_allocat\
+    or_opts\x18\x10\x20\x01(\x0b2\&quot;.tensorflow.ScopedAllocatorOptionsR\x13sc\
+    opedAllocatorOpts\x12\x1e\n\noptimizers\x18d\x20\x03(\tR\noptimizers\x12\
+    ]\n\x11custom_optimizers\x18\xc8\x01\x20\x03(\x0b2/.tensorflow.RewriterC\
+    onfig.CustomGraphOptimizerR\x10customOptimizers\x12b\n\x1finter_optimize\
+    r_verifier_config\x18\xac\x02\x20\x01(\x0b2\x1a.tensorflow.VerifierConfi\
+    gR\x1cinterOptimizerVerifierConfig\x12f\n!post_optimization_verifier_con\
+    fig\x18\xad\x02\x20\x01(\x0b2\x1a.tensorflow.VerifierConfigR\x1epostOpti\
+    mizationVerifierConfig\x1a\xea\x01\n\x14CustomGraphOptimizer\x12\x12\n\
+    \x04name\x18\x01\x20\x01(\tR\x04name\x12f\n\rparameter_map\x18\x02\x20\
+    \x03(\x0b2A.tensorflow.RewriterConfig.CustomGraphOptimizer.ParameterMapE\
+    ntryR\x0cparameterMap\x1aV\n\x11ParameterMapEntry\x12\x10\n\x03key\x18\
+    \x01\x20\x01(\tR\x03key\x12+\n\x05value\x18\x02\x20\x01(\x0b2\x15.tensor\
+    flow.AttrValueR\x05value:\x028\x01\&quot;d\n\x06Toggle\x12\x0b\n\x07DEFAULT\
+    \x10\0\x12\x06\n\x02ON\x10\x01\x12\x07\n\x03OFF\x10\x02\x12\x0e\n\nAGGRE\
+    SSIVE\x10\x03\x12\x15\n\x11EXPERIMENTAL_MLIR\x10\x04\x12\x15\n\x11EXPERI\
+    MENTAL_BOTH\x10\x05\&quot;I\n\tCpuLayout\x12\x18\n\x14NO_CONVERSION_ON_CPU\
+    \x10\0\x12\x10\n\x0cNCHW_TO_NHWC\x10\x01\x12\x10\n\x0cNHWC_TO_NCHW\x10\
+    \x02\&quot;&lt;\n\x11NumIterationsType\x12\x15\n\x11DEFAULT_NUM_ITERS\x10\0\x12\
+    \x07\n\x03ONE\x10\x01\x12\x07\n\x03TWO\x10\x02\&quot;\x9f\x01\n\nMemOptType\
+    \x12\x13\n\x0fDEFAULT_MEM_OPT\x10\0\x12\x0e\n\nNO_MEM_OPT\x10\x01\x12\n\
+    \n\x06MANUAL\x10\x02\x12\x17\n\x13SWAPPING_HEURISTICS\x10\x04\x12\x1c\n\
+    \x18RECOMPUTATION_HEURISTICS\x10\x05\x12\x19\n\x15SCHEDULING_HEURISTICS\
+    \x10\x06\x12\x0e\n\nHEURISTICS\x10\x03B\x8c\x01\n\x18org.tensorflow.fram\
+    eworkB\x14RewriterConfigProtosP\x01ZUgithub.com/tensorflow/tensorflow/te\
+    nsorflow/go/core/protobuf/for_core_protos_go_proto\xf8\x01\x01b\x06proto\
+    3\
 &quot;</span>;
 
 <span class="kw">static</span> <span class="ident">file_descriptor_proto_lazy</span>: <span class="ident">::protobuf::rt::LazyV2</span><span class="op">&lt;</span><span class="ident">::protobuf::descriptor::FileDescriptorProto</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">::protobuf::rt::LazyV2::INIT</span>;
@@ -4460,5 +4593,5 @@
     })
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="tensorflow" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="tensorflow" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.59.0 (9d1b2106e 2022-02-23)" ></div>
 </body></html>

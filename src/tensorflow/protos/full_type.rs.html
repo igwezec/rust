@@ -1,5 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src&#x2F;protos&#x2F;full_type.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>full_type.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
-    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../tensorflow/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src&#x2F;protos&#x2F;full_type.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>full_type.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a class="sidebar-logo" href="../../../tensorflow/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.png" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../tensorflow/index.html"><img class="rust-logo" src="../../../rust-logo.png" alt="logo"></a><nav class="sub"><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -520,6 +521,14 @@
 <span id="519">519</span>
 <span id="520">520</span>
 <span id="521">521</span>
+<span id="522">522</span>
+<span id="523">523</span>
+<span id="524">524</span>
+<span id="525">525</span>
+<span id="526">526</span>
+<span id="527">527</span>
+<span id="528">528</span>
+<span id="529">529</span>
 </pre><pre class="rust"><code><span class="comment">// This file is generated by rust-protobuf 2.27.1. Do not edit</span>
 <span class="comment">// @generated</span>
 
@@ -881,6 +890,7 @@
     <span class="ident">TFT_ARRAY</span> <span class="op">=</span> <span class="number">1001</span>,
     <span class="ident">TFT_OPTIONAL</span> <span class="op">=</span> <span class="number">1002</span>,
     <span class="ident">TFT_LITERAL</span> <span class="op">=</span> <span class="number">1003</span>,
+    <span class="ident">TFT_ENCODED</span> <span class="op">=</span> <span class="number">1004</span>,
     <span class="ident">TFT_BOOL</span> <span class="op">=</span> <span class="number">200</span>,
     <span class="ident">TFT_UINT8</span> <span class="op">=</span> <span class="number">201</span>,
     <span class="ident">TFT_UINT16</span> <span class="op">=</span> <span class="number">202</span>,
@@ -899,6 +909,7 @@
     <span class="ident">TFT_STRING</span> <span class="op">=</span> <span class="number">214</span>,
     <span class="ident">TFT_DATASET</span> <span class="op">=</span> <span class="number">10102</span>,
     <span class="ident">TFT_RAGGED</span> <span class="op">=</span> <span class="number">10103</span>,
+    <span class="ident">TFT_ITERATOR</span> <span class="op">=</span> <span class="number">10104</span>,
     <span class="ident">TFT_MUTEX_LOCK</span> <span class="op">=</span> <span class="number">10202</span>,
     <span class="ident">TFT_LEGACY_VARIANT</span> <span class="op">=</span> <span class="number">10203</span>,
 }
@@ -921,6 +932,7 @@
             <span class="number">1001</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_ARRAY</span>),
             <span class="number">1002</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_OPTIONAL</span>),
             <span class="number">1003</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_LITERAL</span>),
+            <span class="number">1004</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_ENCODED</span>),
             <span class="number">200</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_BOOL</span>),
             <span class="number">201</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_UINT8</span>),
             <span class="number">202</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_UINT16</span>),
@@ -939,6 +951,7 @@
             <span class="number">214</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_STRING</span>),
             <span class="number">10102</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_DATASET</span>),
             <span class="number">10103</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_RAGGED</span>),
+            <span class="number">10104</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_ITERATOR</span>),
             <span class="number">10202</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_MUTEX_LOCK</span>),
             <span class="number">10203</span> =&gt; <span class="ident">::std::option::Option::Some</span>(<span class="ident">FullTypeId::TFT_LEGACY_VARIANT</span>),
             <span class="kw">_</span> =&gt; <span class="ident">::std::option::Option::None</span>
@@ -958,6 +971,7 @@
             <span class="ident">FullTypeId::TFT_ARRAY</span>,
             <span class="ident">FullTypeId::TFT_OPTIONAL</span>,
             <span class="ident">FullTypeId::TFT_LITERAL</span>,
+            <span class="ident">FullTypeId::TFT_ENCODED</span>,
             <span class="ident">FullTypeId::TFT_BOOL</span>,
             <span class="ident">FullTypeId::TFT_UINT8</span>,
             <span class="ident">FullTypeId::TFT_UINT16</span>,
@@ -976,6 +990,7 @@
             <span class="ident">FullTypeId::TFT_STRING</span>,
             <span class="ident">FullTypeId::TFT_DATASET</span>,
             <span class="ident">FullTypeId::TFT_RAGGED</span>,
+            <span class="ident">FullTypeId::TFT_ITERATOR</span>,
             <span class="ident">FullTypeId::TFT_MUTEX_LOCK</span>,
             <span class="ident">FullTypeId::TFT_LEGACY_VARIANT</span>,
         ];
@@ -1010,24 +1025,26 @@
     \x0bFullTypeDef\x12/\n\x07type_id\x18\x01\x20\x01(\x0e2\x16.tensorflow.F\
     ullTypeIdR\x06typeId\x12+\n\x04args\x18\x02\x20\x03(\x0b2\x17.tensorflow\
     .FullTypeDefR\x04args\x12\x0e\n\x01s\x18\x03\x20\x01(\tH\0R\x01s\x12\x0e\
-    \n\x01i\x18\x04\x20\x01(\x03H\0R\x01iB\x06\n\x04attr*\x9e\x04\n\nFullTyp\
+    \n\x01i\x18\x04\x20\x01(\x03H\0R\x01iB\x06\n\x04attr*\xc3\x04\n\nFullTyp\
     eId\x12\r\n\tTFT_UNSET\x10\0\x12\x0b\n\x07TFT_VAR\x10\x01\x12\x0b\n\x07T\
     FT_ANY\x10\x02\x12\x0f\n\x0bTFT_PRODUCT\x10\x03\x12\r\n\tTFT_NAMED\x10\
     \x04\x12\x10\n\x0cTFT_FOR_EACH\x10\x14\x12\x10\n\x0cTFT_CALLABLE\x10d\
     \x12\x0f\n\nTFT_TENSOR\x10\xe8\x07\x12\x0e\n\tTFT_ARRAY\x10\xe9\x07\x12\
     \x11\n\x0cTFT_OPTIONAL\x10\xea\x07\x12\x10\n\x0bTFT_LITERAL\x10\xeb\x07\
-    \x12\r\n\x08TFT_BOOL\x10\xc8\x01\x12\x0e\n\tTFT_UINT8\x10\xc9\x01\x12\
-    \x0f\n\nTFT_UINT16\x10\xca\x01\x12\x0f\n\nTFT_UINT32\x10\xcb\x01\x12\x0f\
-    \n\nTFT_UINT64\x10\xcc\x01\x12\r\n\x08TFT_INT8\x10\xcd\x01\x12\x0e\n\tTF\
-    T_INT16\x10\xce\x01\x12\x0e\n\tTFT_INT32\x10\xcf\x01\x12\x0e\n\tTFT_INT6\
-    4\x10\xd0\x01\x12\r\n\x08TFT_HALF\x10\xd1\x01\x12\x0e\n\tTFT_FLOAT\x10\
-    \xd2\x01\x12\x0f\n\nTFT_DOUBLE\x10\xd3\x01\x12\x11\n\x0cTFT_BFLOAT16\x10\
-    \xd7\x01\x12\x12\n\rTFT_COMPLEX64\x10\xd4\x01\x12\x13\n\x0eTFT_COMPLEX12\
-    8\x10\xd5\x01\x12\x0f\n\nTFT_STRING\x10\xd6\x01\x12\x10\n\x0bTFT_DATASET\
-    \x10\xf6N\x12\x0f\n\nTFT_RAGGED\x10\xf7N\x12\x13\n\x0eTFT_MUTEX_LOCK\x10\
-    \xdaO\x12\x17\n\x12TFT_LEGACY_VARIANT\x10\xdbOB\x81\x01\n\x18org.tensorf\
-    low.frameworkB\x0eFullTypeProtosP\x01ZPgithub.com/tensorflow/tensorflow/\
-    tensorflow/go/core/framework/full_type_go_proto\xf8\x01\x01b\x06proto3\
+    \x12\x10\n\x0bTFT_ENCODED\x10\xec\x07\x12\r\n\x08TFT_BOOL\x10\xc8\x01\
+    \x12\x0e\n\tTFT_UINT8\x10\xc9\x01\x12\x0f\n\nTFT_UINT16\x10\xca\x01\x12\
+    \x0f\n\nTFT_UINT32\x10\xcb\x01\x12\x0f\n\nTFT_UINT64\x10\xcc\x01\x12\r\n\
+    \x08TFT_INT8\x10\xcd\x01\x12\x0e\n\tTFT_INT16\x10\xce\x01\x12\x0e\n\tTFT\
+    _INT32\x10\xcf\x01\x12\x0e\n\tTFT_INT64\x10\xd0\x01\x12\r\n\x08TFT_HALF\
+    \x10\xd1\x01\x12\x0e\n\tTFT_FLOAT\x10\xd2\x01\x12\x0f\n\nTFT_DOUBLE\x10\
+    \xd3\x01\x12\x11\n\x0cTFT_BFLOAT16\x10\xd7\x01\x12\x12\n\rTFT_COMPLEX64\
+    \x10\xd4\x01\x12\x13\n\x0eTFT_COMPLEX128\x10\xd5\x01\x12\x0f\n\nTFT_STRI\
+    NG\x10\xd6\x01\x12\x10\n\x0bTFT_DATASET\x10\xf6N\x12\x0f\n\nTFT_RAGGED\
+    \x10\xf7N\x12\x11\n\x0cTFT_ITERATOR\x10\xf8N\x12\x13\n\x0eTFT_MUTEX_LOCK\
+    \x10\xdaO\x12\x17\n\x12TFT_LEGACY_VARIANT\x10\xdbOB\x81\x01\n\x18org.ten\
+    sorflow.frameworkB\x0eFullTypeProtosP\x01ZPgithub.com/tensorflow/tensorf\
+    low/tensorflow/go/core/framework/full_type_go_proto\xf8\x01\x01b\x06prot\
+    o3\
 &quot;</span>;
 
 <span class="kw">static</span> <span class="ident">file_descriptor_proto_lazy</span>: <span class="ident">::protobuf::rt::LazyV2</span><span class="op">&lt;</span><span class="ident">::protobuf::descriptor::FileDescriptorProto</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">::protobuf::rt::LazyV2::INIT</span>;
@@ -1042,5 +1059,5 @@
     })
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="tensorflow" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="tensorflow" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.59.0 (9d1b2106e 2022-02-23)" ></div>
 </body></html>
